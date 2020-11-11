@@ -125,6 +125,14 @@ img {
   left: 0;
   background: white;
   transform: skewY(-3deg);
+  -webkit-transform: skewY(-3deg);
+  -moz-transform: skewY(-3deg);
+  -ms-transform: skewY(-3deg);
+}
+
+/* stats */
+.stats {
+  padding-top: 100px;
 }
 
 /* Utilities */
