@@ -48,15 +48,19 @@ img {
 code,
 pre {
   background: #333;
-  color: white;
+  color: #fff;
   padding: 10px;
 }
 
-/* Navbar */
+.hidden {
+  visibility: hidden;
+  height: 0;
+}
 
+/* Navbar */
 .navbar {
   background-color: var(--primary-color);
-  color: white;
+  color: #fff;
   height: 70px;
 }
 
@@ -65,13 +69,13 @@ pre {
 }
 
 .navbar a {
-  color: white;
+  color: #fff;
   padding: 10px;
   margin: 0 5px;
 }
 
 .navbar a:hover {
-  border-bottom: 2px white solid;
+  border-bottom: 2px #fff solid;
 }
 
 .navbar .flex {
@@ -82,7 +86,7 @@ pre {
 .showcase {
   height: 400px;
   background-color: var(--primary-color);
-  color: white;
+  color: #fff;
   position: relative;
 }
 
@@ -95,9 +99,13 @@ pre {
 }
 
 .showcase .grid {
-  grid-template-columns: 55% 45%;
-  gap: 30px;
   overflow: visible;
+  grid-template-columns: 55% auto;
+  gap: 30px;
+}
+
+.showcase-text {
+  animation: slideInFromLeft 1s ease-in;
 }
 
 .showcase-form {
@@ -108,10 +116,11 @@ pre {
   padding: 40px;
   z-index: 100;
   justify-self: flex-end;
+  animation: slideInFromRight 1s ease-in;
 }
 
 .showcase-form .form-control {
-  margin: 30px;
+  margin: 30px 0;
 }
 
 .showcase-form input[type="text"],
@@ -135,16 +144,17 @@ pre {
   bottom: -70px;
   right: 0;
   left: 0;
-  background: white;
+  background: #fff;
   transform: skewY(-3deg);
   -webkit-transform: skewY(-3deg);
   -moz-transform: skewY(-3deg);
   -ms-transform: skewY(-3deg);
 }
 
-/* stats */
+/* Stats */
 .stats {
   padding-top: 100px;
+  animation: slideInFromBottom 1s ease-in;
 }
 
 .stats-heading {
@@ -161,7 +171,7 @@ pre {
   font-weight: bold;
 }
 
-/* CLI */
+/* Cli */
 .cli .grid {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
@@ -183,13 +193,13 @@ pre {
   flex-wrap: wrap;
 }
 
-.langauges .card {
+.languages .card {
   text-align: center;
   margin: 18px 10px 40px;
   transition: transform 0.2s ease-in;
 }
 
-.languages .card .h4 {
+.languages .card h4 {
   font-size: 20px;
   margin-bottom: 10px;
 }
@@ -249,7 +259,48 @@ pre {
 
 /* Footer */
 .footer .social a {
-  margin: 0 5px;
+  margin: 0 10px;
+}
+
+/* Animations */
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
 }
 
 /* Tablets and under */
