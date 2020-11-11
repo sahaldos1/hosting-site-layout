@@ -4,7 +4,9 @@
   --primary-color: #047aed;
   --secondary-color: #1c3fa8;
   --dark-color: #002240;
-  --light-coor: #f4f4f4;
+  --light-color: #f4f4f4;
+  --success-color: #5cb85c;
+  --error-color: #d9534f;
 }
 
 * {
@@ -41,6 +43,13 @@ p {
 
 img {
   width: 100%;
+}
+
+code,
+pre {
+  background: #333;
+  color: white;
+  padding: 10px;
 }
 
 /* Navbar */
@@ -217,8 +226,8 @@ img {
   grid-column: 1 / span 2;
 }
 
-/* Docs page */
-.docs-main h2 {
+/* Docs */
+.docs-main h3 {
   margin: 20px 0;
 }
 
@@ -234,7 +243,7 @@ img {
   border-bottom: 1px #ccc solid;
 }
 
-.docs-main nav li a:hover {
+.docs-main a:hover {
   font-weight: bold;
 }
 
